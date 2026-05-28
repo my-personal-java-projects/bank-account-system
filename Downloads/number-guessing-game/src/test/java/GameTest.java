@@ -3,12 +3,7 @@ import org.junit.jupiter.api.BeforeEach;
 import java.lang.reflect.Field;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Unit tests for Game.
- *
- * Because the secret number is randomly generated, tests use reflection
- * to read it where needed, ensuring deterministic assertions.
- */
+
 class GameTest {
 
     private Game game;
@@ -17,13 +12,11 @@ class GameTest {
     @BeforeEach
     void setUp() throws Exception {
         game = new Game(1, 100, 7);
-        // Use reflection to read the private secretNumber for deterministic tests
         Field field = Game.class.getDeclaredField("secretNumber");
         field.setAccessible(true);
         secretNumber = (int) field.get(game);
     }
 
-    // ── Constructor ──────────────────────────────────────────────────────────
 
     @Test
     void constructor_shouldThrowWhenMaxAttemptsIsZero() {
@@ -52,7 +45,6 @@ class GameTest {
         assertFalse(game.isGameOver());
     }
 
-    // ── Correct guess ────────────────────────────────────────────────────────
 
     @Test
     void guess_correctGuess_shouldReturnCorrectStatus() {
@@ -72,7 +64,6 @@ class GameTest {
         assertTrue(game.isGameOver());
     }
 
-    // ── Too low ──────────────────────────────────────────────────────────────
 
     @Test
     void guess_tooLow_shouldReturnTooLowStatus() {
@@ -82,7 +73,7 @@ class GameTest {
         }
     }
 
-    // ── Too high ─────────────────────────────────────────────────────────────
+
 
     @Test
     void guess_tooHigh_shouldReturnTooHighStatus() {
@@ -92,7 +83,6 @@ class GameTest {
         }
     }
 
-    // ── Attempts tracking ────────────────────────────────────────────────────
 
     @Test
     void guess_shouldIncrementAttemptsUsed() {
@@ -129,7 +119,6 @@ class GameTest {
         assertEquals(attemptsBefore, game.getAttemptsUsed());
     }
 
-    // ── Getters ──────────────────────────────────────────────────────────────
 
     @Test
     void getBounds_shouldMatchConstructorValues() {

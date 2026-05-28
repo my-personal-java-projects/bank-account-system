@@ -1,6 +1,5 @@
-/**
- * Immutable value object representing the outcome of a single guess.
- */
+//Immutable value object representing the outcome of a single guess.
+
 public class GuessResult {
 
     public enum Status {

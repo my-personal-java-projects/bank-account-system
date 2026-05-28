@@ -1,6 +1,5 @@
-/**
- * Core game logic. Holds state for one round of the number guessing game.
- */
+// Core game logic. Holds state for one round of the number guessing game.
+
 public class Game {
 
     private final int secretNumber;
@@ -22,9 +21,8 @@ public class Game {
         this.secretNumber = NumberGenerator.generate(lowerBound, upperBound);
     }
 
-    /**
-     * Processes a player's guess and returns a GuessResult.
-     */
+    // Processes a player's guess and returns a GuessResult.
+
     public GuessResult guess(int number) {
         if (isGameOver()) {
             return new GuessResult(GuessResult.Status.GAME_OVER, attemptsUsed, maxAttempts);

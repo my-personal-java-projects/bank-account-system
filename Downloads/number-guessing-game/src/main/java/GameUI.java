@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
-/**
- * Console-based user interface for the Number Guessing Game.
- * Handles all input/output and game loop control.
- */
+// Handles all input/output and game loop control.
+
 public class GameUI {
 
     private static final int LOWER_BOUND  = 1;

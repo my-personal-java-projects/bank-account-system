@@ -2,9 +2,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.RepeatedTest;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Unit tests for NumberGenerator.
- */
+
 class NumberGeneratorTest {
 
     @RepeatedTest(50)
