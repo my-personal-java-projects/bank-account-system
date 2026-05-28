@@ -1,9 +1,8 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Immutable record of a single account transaction.
- */
+// Immutable record of a single account transaction.
+ 
 public class Transaction {
 
     public enum Type { DEPOSIT, WITHDRAWAL, TRANSFER_IN, TRANSFER_OUT }
