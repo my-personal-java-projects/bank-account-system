@@ -2,9 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Unit tests for BankAccount.
- */
+
 class BankAccountTest {
 
     private BankAccount account;
@@ -44,7 +42,6 @@ class BankAccountTest {
                 () -> new BankAccount("ACC003", "Test", -100));
     }
 
-    // ── Deposit ──────────────────────────────────────────────────────────────
 
     @Test
     void deposit_shouldIncreaseBalance() {
@@ -77,7 +74,6 @@ class BankAccountTest {
                 () -> account.deposit(-50, "Negative deposit"));
     }
 
-    // ── Withdrawal ───────────────────────────────────────────────────────────
 
     @Test
     void withdraw_shouldDecreaseBalance() {
@@ -123,7 +119,6 @@ class BankAccountTest {
                 () -> account.withdraw(0, "Zero"));
     }
 
-    // ── Transfer ─────────────────────────────────────────────────────────────
 
     @Test
     void transferTo_shouldDeductFromSource() {
@@ -170,7 +165,6 @@ class BankAccountTest {
         assertEquals(500.00, target.getBalance(), 0.001);
     }
 
-    // ── History immutability ─────────────────────────────────────────────────
 
     @Test
     void getTransactions_shouldReturnUnmodifiableList() {
@@ -178,7 +172,6 @@ class BankAccountTest {
                 () -> account.getTransactions().clear());
     }
 
-    // ── toString ─────────────────────────────────────────────────────────────
 
     @Test
     void toString_shouldContainAccountNumberAndOwner() {
