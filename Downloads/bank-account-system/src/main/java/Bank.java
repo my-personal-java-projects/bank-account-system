@@ -1,8 +1,7 @@
 import java.util.*;
 
-/**
- * Manages a collection of BankAccounts. Acts as a simple in-memory bank.
- */
+//Manages a collection of BankAccounts. Acts as a simple in-memory bank.
+ 
 public class Bank {
 
     private final String bankName;
@@ -13,9 +12,8 @@ public class Bank {
         this.bankName = bankName;
     }
 
-    /**
-     * Creates a new account and returns it.
-     */
+    // Creates a new account and returns it.
+     
     public BankAccount createAccount(String ownerName, double initialDeposit) {
         String accNum = "ACC" + nextAccountNumber++;
         BankAccount account = new BankAccount(accNum, ownerName, initialDeposit);
@@ -23,11 +21,7 @@ public class Bank {
         return account;
     }
 
-    /**
-     * Finds an account by account number.
-     *
-     * @throws NoSuchElementException if account not found
-     */
+    
     public BankAccount findAccount(String accountNumber) {
         BankAccount account = accounts.get(accountNumber);
         if (account == null) {
