@@ -1,9 +1,8 @@
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-/**
- * Console UI for the Bank Account System.
- */
+// Console UI for the Bank Account System.
+
 public class BankUI {
 
     private final Bank bank = new Bank("BBD Community Bank");
