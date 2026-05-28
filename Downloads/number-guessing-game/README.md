@@ -1,10 +1,10 @@
-# Number Guessing Game 🎯
+# Number Guessing Game
 
 A console-based Java game where the player guesses a randomly generated number within a limited number of attempts. Built to demonstrate clean OOP design, separation of concerns, input validation, and unit testing with JUnit 5.
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 | Detail | Info |
 |---|---|
@@ -16,7 +16,7 @@ A console-based Java game where the player guesses a randomly generated number w
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
 1. The program secretly picks a number between **1 and 100**
 2. You have **7 attempts** to guess it
@@ -27,7 +27,7 @@ A console-based Java game where the player guesses a randomly generated number w
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 number-guessing-game/
@@ -52,7 +52,7 @@ number-guessing-game/
 
 ---
 
-## 🚀 Running the Application in IntelliJ IDEA
+## Running the Application in IntelliJ IDEA
 
 ### Step 1 — Open the project
 1. Open IntelliJ IDEA
@@ -72,7 +72,7 @@ number-guessing-game/
 
 ---
 
-## 🧪 Running the Tests
+## Running the Tests
 
 ### In IntelliJ
 - Right-click the `src/test/java` folder → **Run 'All Tests'**
@@ -102,7 +102,7 @@ mvn test -Dtest=GameTest#guess_correctGuess_shouldReturnCorrectStatus
 
 ---
 
-## 🧱 Class Responsibilities
+## Class Responsibilities
 
 ### `Main`
 The entry point. Creates a `GameUI` and calls `start()`. No logic lives here.
@@ -121,7 +121,7 @@ A stateless utility class. Has one job: `generate(lowerBound, upperBound)` retur
 
 ---
 
-## 🔑 Key Java Concepts Demonstrated
+## Key Java Concepts Demonstrated
 
 | Concept | Where |
 |---|---|
@@ -135,13 +135,13 @@ A stateless utility class. Has one job: `generate(lowerBound, upperBound)` retur
 
 ---
 
-## 📐 UML Diagram
+## UML Diagram
 
 See [`docs/uml-diagram.md`](docs/uml-diagram.md)
 
 ---
 
-## 💡 Possible Extensions
+## Possible Extensions
 
 - Add difficulty levels: Easy (10 tries / 1–50), Medium (7 tries / 1–100), Hard (4 tries / 1–200)
 - Track a session high score (fewest attempts to win)
