@@ -3,9 +3,7 @@ import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Unit tests for Bank.
- */
+
 class BankTest {
 
     private Bank bank;
@@ -15,7 +13,6 @@ class BankTest {
         bank = new Bank("Test Bank");
     }
 
-    // ── createAccount ────────────────────────────────────────────────────────
 
     @Test
     void createAccount_shouldReturnAccountWithCorrectOwner() {
@@ -49,7 +46,6 @@ class BankTest {
         assertEquals(created.getAccountNumber(), found.getAccountNumber());
     }
 
-    // ── findAccount ──────────────────────────────────────────────────────────
 
     @Test
     void findAccount_nonExistentNumber_shouldThrowNoSuchElementException() {
@@ -65,7 +61,6 @@ class BankTest {
         assertEquals("Second", found.getOwnerName());
     }
 
-    // ── getAllAccounts ────────────────────────────────────────────────────────
 
     @Test
     void getAllAccounts_initiallyEmpty() {
@@ -87,7 +82,6 @@ class BankTest {
                 () -> bank.getAllAccounts().clear());
     }
 
-    // ── getBankName ──────────────────────────────────────────────────────────
 
     @Test
     void getBankName_shouldReturnConstructorValue() {
