@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Represents a single bank account with deposit, withdrawal, and transfer capabilities.
- */
 public class BankAccount {
 
     private final String accountNumber;
@@ -26,20 +23,14 @@ public class BankAccount {
         }
     }
 
-    /**
-     * Deposits money into this account.
-     */
+
     public void deposit(double amount, String description) {
         validatePositive(amount, "Deposit");
         balance += amount;
         transactions.add(new Transaction(Transaction.Type.DEPOSIT, amount, balance, description));
     }
 
-    /**
-     * Withdraws money from this account.
-     *
-     * @throws IllegalStateException if funds are insufficient
-     */
+    
     public void withdraw(double amount, String description) {
         validatePositive(amount, "Withdrawal");
         if (amount > balance) {
@@ -73,10 +64,14 @@ public class BankAccount {
         }
     }
 
-    public String getAccountNumber()          { return accountNumber; }
-    public String getOwnerName()              { return ownerName; }
-    public double getBalance()                { return balance; }
-    public List<Transaction> getTransactions(){ return Collections.unmodifiableList(transactions); }
+    public String getAccountNumber()          
+    { return accountNumber; }
+    public String getOwnerName() 
+    { return ownerName; }
+    public double getBalance()
+    { return balance; }
+    public List<Transaction> getTransactions()
+    { return Collections.unmodifiableList(transactions); }
 
     @Override
     public String toString() {
