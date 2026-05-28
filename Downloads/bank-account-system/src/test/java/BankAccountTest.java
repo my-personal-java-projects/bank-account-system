@@ -12,7 +12,6 @@ class BankAccountTest {
         account = new BankAccount("ACC001", "Thabo Nkosi", 1000.00);
     }
 
-    // ── Constructor ──────────────────────────────────────────────────────────
 
     @Test
     void constructor_shouldSetOwnerAndAccountNumber() {
