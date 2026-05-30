@@ -1,10 +1,10 @@
-# Bank Account System 🏦
+# Bank Account System 
 
 A console-based Java application simulating a real bank. Supports multiple accounts, deposits, withdrawals, inter-account transfers, and full timestamped transaction history — all in memory. Built to demonstrate multi-class OOP design, business rule enforcement, exception handling, and thorough unit testing with JUnit 5.
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 | Detail | Info |
 |---|---|
@@ -12,11 +12,11 @@ A console-based Java application simulating a real bank. Supports multiple accou
 | Build Tool | Maven |
 | Testing | JUnit 5 (Jupiter) |
 | Type | Console Application |
-| Author | Your Name |
+
 
 ---
 
-## ⚙️ Features
+## Features
 
 - Create unlimited bank accounts with unique auto-generated account numbers
 - Deposit and withdraw with full input validation
@@ -29,7 +29,7 @@ A console-based Java application simulating a real bank. Supports multiple accou
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 bank-account-system/
@@ -54,7 +54,7 @@ bank-account-system/
 
 ---
 
-## 🚀 Running the Application in IntelliJ IDEA
+## Running the Application in IntelliJ IDEA
 
 ### Step 1 — Open the project
 1. Open IntelliJ IDEA
@@ -73,7 +73,7 @@ bank-account-system/
 
 ---
 
-## 💬 Usage Example
+## Usage Example
 
 ```
 =========================================
@@ -116,7 +116,7 @@ Choice: 5
 
 ---
 
-## 🧪 Running the Tests
+## Running the Tests
 
 ### In IntelliJ
 - Right-click `src/test/java` → **Run 'All Tests'**
@@ -145,7 +145,7 @@ mvn test -Dtest=BankAccountTest#withdraw_insufficientFunds_shouldThrowIllegalSta
 
 ---
 
-## 🧱 Class Responsibilities
+## Class Responsibilities
 
 ### `Main`
 Entry point. Creates and starts a `BankUI`. No business logic.
@@ -169,7 +169,7 @@ An immutable record of one financial event. Stores transaction type, amount, res
 
 ---
 
-## 🔑 Key Java Concepts Demonstrated
+## Key Java Concepts Demonstrated
 
 | Concept | Where |
 |---|---|
@@ -185,13 +185,13 @@ An immutable record of one financial event. Stores transaction type, amount, res
 
 ---
 
-## 📐 UML Diagram
+## UML Diagram
 
 See [`docs/uml-diagram.md`](docs/uml-diagram.md)
 
 ---
 
-## 💡 Possible Extensions
+## Possible Extensions
 
 - Add account types: `SavingsAccount` (monthly interest), `ChequeAccount` (overdraft limit)
 - Persist all accounts and transactions to a JSON file using Jackson
